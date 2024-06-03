@@ -52,6 +52,10 @@ h6 {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .header-logo,
@@ -84,7 +88,7 @@ h6 {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
-  transition: color 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -139,7 +143,7 @@ h6 {
   color: #434455;
   font-style: normal;
   padding: 24px 0;
-  transition: color 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .headline {
@@ -163,6 +167,8 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .main-btn:hover,
@@ -185,6 +191,7 @@ h6 {
   border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------- */
@@ -200,13 +207,16 @@ h6 {
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px 0;
+  height: 112px;
+  margin-bottom: 8px;
 }
 .features-list,
 .icons {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 24px 0;
 }
 
 .features-item {
@@ -267,12 +277,12 @@ h6 {
 .team-office-icon {
   display: flex;
   margin-top: 8px;
-  align-self: flex-end;
+
   gap: 24px;
-  flex-shrink: 0;
+
   padding: 0 16px;
 }
-.team-office-icon .team-link {
+.team-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,8 +290,10 @@ h6 {
   height: 40px;
   border-radius: 50px;
   background-color: #4d5ae5;
+  text-decoration: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-link:hover {
+.team-link:focus {
   background-color: #404bbf;
 }
 .our-team-title {
@@ -329,23 +341,23 @@ h6 {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #3f51b5;
+  background-color: #4d5ae5;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #f4f4fd;
 
   transform: translatey(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  padding: 40px 32px 0;
+  padding: 40px 32px;
   text-align: left;
 }
 .our-portfolio-item {
   position: relative;
-  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.our-portfolio-item:hover .portfolio-settings {
+.our-portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -395,13 +407,16 @@ h6 {
 
 /* --------------------- */
 /* -------FOOTER-------  */
+
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer {
   background-color: #2e2f42;
   padding: 100px 0;
 }
+
 .footer-logo {
   color: #4d5ae5;
   display: inline-block;
@@ -419,13 +434,16 @@ h6 {
   max-width: 264px;
 }
 .social-footer-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
+
 .link-icon {
-  display: inline-flex;
+  display: flex;
   fill: #f4f4fd;
   justify-content: center;
   align-items: center;
@@ -434,6 +452,7 @@ h6 {
   height: 40px;
   border-radius: 50px;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-footer-list {
   display: flex;
@@ -442,10 +461,10 @@ h6 {
   flex-shrink: 0;
 }
 .icons-footer {
-  margin-right: auto;
+  margin-right: 120px;
   padding-left: 120px;
 }
 
-.link-icon:hover {
+.link-icon:focus {
   background-color: #31d0aa;
 }
